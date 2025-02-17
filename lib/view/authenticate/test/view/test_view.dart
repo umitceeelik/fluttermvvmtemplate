@@ -32,17 +32,17 @@ class _TestsViewState extends BaseState<TestsView> {
   }
 
   Widget get scaffoldBody => Scaffold(
-    appBar: AppBar(
-      leading: Text(LocaleManager.instance.getStringValue(PreferencesKeys.TOKEN)),
-      title: textWelcomeWidget,
-      actions: [iconButtonChangeTheme],
-    ),
+    appBar: appBar(),
     floatingActionButton: floatingActionButtonNumberIncrement,
     body: textNumber,
   );
 
-  Text get textWelcomeWidget {
-    return Text(LocaleKeys.welcome.locale);
+  AppBar appBar() {
+    return AppBar(
+      leading: Text(LocaleManager.instance.getStringValue(PreferencesKeys.TOKEN)),
+      title: textWelcomeWidget,
+      actions: [iconButtonChangeTheme],
+    );
   }
 
   IconButton get iconButtonChangeTheme {
@@ -55,13 +55,22 @@ class _TestsViewState extends BaseState<TestsView> {
   }
 
   Widget get textNumber {
-    return Observer(
-      builder: (context) => Center(
-        child: Text(
-          viewModel!.number.toString()
+    return Column(
+      children: [
+        mailField,
+        Observer(
+          builder: (context) => Center(
+            child: Text(
+              viewModel!.number.toString()
+            ),
+          ),
         ),
-      ),
+      ],
     );
+  }
+
+  Text get textWelcomeWidget {
+    return Text(LocaleKeys.welcome.locale);
   }
 
   FloatingActionButton get floatingActionButtonNumberIncrement {
@@ -70,5 +79,11 @@ class _TestsViewState extends BaseState<TestsView> {
       child: Icon(Icons.add),
     );
   }
+}
+
+extension _FormArea on _TestsViewState {
+  TextFormField get mailField => TextFormField(
+    validator: (value) => value!.isValidEmail,
+  );
 }
 
