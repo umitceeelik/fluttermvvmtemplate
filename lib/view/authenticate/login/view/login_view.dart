@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/base/view/base_view.dart';
-import 'package:fluttermvvmtemplate/core/extension/context_extension.dart';
-import 'package:fluttermvvmtemplate/view/authenticate/login/viewmodel/login_view_model.dart';
+import '../../../../core/base/view/base_view.dart';
+import '../../../../core/extension/context_extension.dart';
+import '../viewmodel/login_view_model.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -23,7 +23,7 @@ class LoginView extends StatelessWidget {
         Container(
           padding: context.paddingLow,
           height: context.height*.4,
-          color: context.colors.primary,
+          color: context.colors.onPrimary,
           child: buildText(context),
         ),
 
@@ -38,7 +38,7 @@ class LoginView extends StatelessWidget {
   Text buildText(BuildContext context) {
     return Text(
           "hello",
-          style: context.textTheme.titleSmall
+          style: context.textTheme.headlineLarge!.copyWith(color: context.colors.primary),
         );
   }
 }

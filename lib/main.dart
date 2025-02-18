@@ -1,13 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/constants/app/app_constants.dart';
-import 'package:fluttermvvmtemplate/core/init/cache/locale_manager.dart';
-import 'package:fluttermvvmtemplate/core/init/lang/language_manager.dart';
-import 'package:fluttermvvmtemplate/core/init/navigation/navigation_route.dart';
-import 'package:fluttermvvmtemplate/core/init/navigation/navigation_service.dart';
-import 'package:fluttermvvmtemplate/core/init/notifier/provider_list.dart';
-import 'package:fluttermvvmtemplate/core/init/notifier/theme_notifier.dart';
-import 'package:fluttermvvmtemplate/view/authenticate/test/view/test_view.dart';
+import 'core/constants/app/app_constants.dart';
+import 'core/init/cache/locale_manager.dart';
+import 'core/init/lang/language_manager.dart';
+import 'core/init/navigation/navigation_route.dart';
+import 'core/init/navigation/navigation_service.dart';
+import 'core/init/notifier/provider_list.dart';
+import 'core/init/notifier/theme_notifier.dart';
+import 'view/authenticate/test/view/test_view.dart';
 import 'package:provider/provider.dart';
 
 void main() async {

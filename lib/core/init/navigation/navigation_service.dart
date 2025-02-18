@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/core/init/navigation/INavigationService.dart';
+
+import 'INavigationService.dart';
 
 class NavigationService implements INavigationService {
   static final NavigationService _instance = NavigationService._init();

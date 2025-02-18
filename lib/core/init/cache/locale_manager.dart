@@ -1,6 +1,6 @@
-import 'package:fluttermvvmtemplate/core/constants/enums/locale_keys_enum.dart';
-import 'package:fluttermvvmtemplate/core/init/language/locale_keys.g.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../constants/enums/locale_keys_enum.dart';
 
 class LocaleManager {
   static final LocaleManager _instance = LocaleManager._init();

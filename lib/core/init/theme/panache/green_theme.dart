@@ -1,0 +1,90 @@
+import 'package:flutter/material.dart';
+
+const String FONT_FAMILY = "Poppins";
+
+final ThemeData greenTheme = ThemeData(
+  fontFamily: FONT_FAMILY,
+  primarySwatch: Colors.lightGreen,
+  brightness: Brightness.light,
+  primaryColor: Color(0xff8bc34a),
+  canvasColor: Color(0xfffafafa),
+  scaffoldBackgroundColor: Color(0xfffafafa),
+  // bottomAppBarColor: Color(0xffffffff),
+  cardColor: Color(0xffffffff),
+  dividerColor: Color(0x1f000000),
+  splashColor: Color(0x66c8c8c8),
+  highlightColor: Color(0x66bcbcbc),
+  // errorColor: Color(0xffd32f2f),
+  indicatorColor: Color(0xff8bc34a),
+  buttonTheme: ButtonThemeData(
+    textTheme: ButtonTextTheme.normal,
+    minWidth: 88,
+    height: 36,
+    padding: EdgeInsets.symmetric(horizontal: 16),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(2.0)),
+    ),
+    buttonColor: Color(0xffe0e0e0),
+    disabledColor: Color(0x61000000),
+    colorScheme: ColorScheme.light(
+      primary: Color(0xff8bc34a),
+      secondary: Color(0xff8bc34a),
+      surface: Color(0xffffffff),
+      error: Color(0xffd32f2f),
+      onPrimary: Color(0xff000000),
+      onSecondary: Color(0xff000000),
+      onSurface: Color(0xff000000),
+      onError: Color(0xffffffff),
+      brightness: Brightness.light,
+    ),
+  ),
+  colorScheme: ColorScheme.light(
+    primary: Color(0xff8bc34a),
+    secondary: Color(0xff8bc34a),
+    error: Color(0xffd32f2f),
+    onPrimary: Color(0xff000000),
+    onSecondary: Color(0xff000000),
+    onError: Color(0xffffffff),
+  ),
+  textTheme: TextTheme(
+    displayLarge: TextStyle(color: Color(0x8a000000)),
+    displayMedium: TextStyle(color: Color(0x8a000000)),
+    displaySmall: TextStyle(color: Color(0x8a000000)),
+    headlineLarge: TextStyle(color: Color(0xdd000000)),
+    headlineMedium: TextStyle(color: Color(0xdd000000)),
+    headlineSmall: TextStyle(color: Color(0xdd000000)),
+    titleLarge: TextStyle(color: Color(0xdd000000)),
+    titleMedium: TextStyle(color: Color(0xdd000000)),
+    titleSmall: TextStyle(color: Color(0xdd000000)),
+    bodyLarge: TextStyle(color: Color(0xdd000000)),
+    bodyMedium: TextStyle(color: Color(0xdd000000)),
+    bodySmall: TextStyle(color: Color(0xdd000000)),
+    labelLarge: TextStyle(color: Color(0xff000000)),
+    labelMedium: TextStyle(color: Color(0xff000000)),
+    labelSmall: TextStyle(color: Color(0xff000000)),
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    labelStyle: TextStyle(color: Color(0xdd000000)),
+    border: UnderlineInputBorder(
+      borderSide: BorderSide(color: Color(0xff000000)),
+    ),
+  ),
+  iconTheme: IconThemeData(color: Color(0xdd000000), size: 24),
+  tabBarTheme: TabBarTheme(
+    indicatorSize: TabBarIndicatorSize.tab,
+    labelColor: Color(0xdd000000),
+    unselectedLabelColor: Color(0xb2000000),
+  ),
+  chipTheme: ChipThemeData(
+    backgroundColor: Color(0x1f000000),
+    brightness: Brightness.light,
+    labelStyle: TextStyle(color: Color(0xde000000)),
+    selectedColor: Color(0x3d000000),
+    shape: StadiumBorder(),
+  ),
+  dialogTheme: DialogTheme(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(0.0)),
+    ),
+  ),
+);
