@@ -8,7 +8,7 @@ class NetworkManager {
   static final NetworkManager _instance = NetworkManager._init();
   static NetworkManager get instance => _instance;
 
-  ICoredio? coreDio;
+  ICoreDio? coreDio;
 
   NetworkManager._init() {
     final baseOptions = BaseOptions(

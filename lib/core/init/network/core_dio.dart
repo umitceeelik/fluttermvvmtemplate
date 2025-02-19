@@ -14,20 +14,19 @@ import 'IResponseModel.dart';
 
 part './network_core/core_operations.dart';
 
-class CoreDio with DioMixin implements Dio, ICoredio {
+class CoreDio with DioMixin implements Dio, ICoreDio {
   final BaseOptions options;
 
   CoreDio(this.options) {
     this.options = options;
     this.interceptors.add(InterceptorsWrapper());
-
     this.httpClientAdapter = IOHttpClientAdapter();
   }
 
   Future<IResponseModel<R>> send<R,T extends BaseModel> (
     String path, {
-    required HttpTypes type,
-    required T parseModel,
+    HttpTypes? type,
+    T? parseModel,
     dynamic data,
     Map<String, dynamic>? queryParameters,
     void Function(int, int)? onReceiveProgress
@@ -36,13 +35,13 @@ class CoreDio with DioMixin implements Dio, ICoredio {
       path,
       data: data,
       options: Options(
-        method: type.rawValue
+        method: type!.rawValue
         )
     );
     switch (response.statusCode) {
       case HttpStatus.ok:
       case HttpStatus.accepted:
-        final model = _responseParser<R>(parseModel, _responseParser);
+        final model = _responseParser<R, T>(parseModel!, response.data);
         return ResponseModel<R>(data: model);
       default:
         return ResponseModel(error: BaseError("Unexpected error occurred"));
