@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermvvmtemplate/view/_widgets/button/face_book_button.dart';
-import 'package:fluttermvvmtemplate/view/_widgets/button/login_button.dart';
+import 'package:fluttermvvmtemplate/view/_product/_widgets/button/face_book_button.dart';
+import 'package:fluttermvvmtemplate/view/_product/_widgets/button/login_button.dart';
 
 import '../../../../core/base/view/base_view.dart';
 import '../../../../core/components/button/icon_button.dart';

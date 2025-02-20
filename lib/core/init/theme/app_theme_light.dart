@@ -53,13 +53,11 @@ class AppThemeLight extends AppTheme with ILightTheme {
       primary: colorSchemeLight!.blue,
       secondary: colorSchemeLight!.white,
       surface: colorSchemeLight!.white,
-      background: colorSchemeLight!.grey,
       error: colorSchemeLight!.green,
-      onPrimary: colorSchemeLight!.blue,
-      onSecondary: colorSchemeLight!.yellow,
-      onSurface: colorSchemeLight!.black,
-      onBackground: colorSchemeLight!.white,
-      onError: colorSchemeLight!.red,
+      onPrimary: colorSchemeLight!.orange,
+      onSecondary: colorSchemeLight!.black,
+      onSurface: colorSchemeLight!.azure,
+      onError: colorSchemeLight!.orange,
       brightness: Brightness.light,
     );
   }

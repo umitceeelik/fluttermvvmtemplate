@@ -8,3 +8,7 @@ extension StringLocalization on String {
 
   String? get isValidEmail => contains(RegExp(ApplicationConstants.EMAIL_REGEX)) ? null : 'Email does not valid'; 
 }
+
+extension ImagePathExtension on String {
+  String get toSVG => "asset/svg/$this.svg";
+}

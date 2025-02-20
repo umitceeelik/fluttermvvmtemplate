@@ -19,4 +19,6 @@ class ColorSchemeLight {
   final Color grey = Color(0xff9e9e9e);
   final Color black = Color(0xff000000);
   final Color white = Color(0xffffffff);
+  
+  final Color azure = Color(0xff27928d);
 }
