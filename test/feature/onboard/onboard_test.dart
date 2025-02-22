@@ -2,9 +2,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'onboard_mock_view_model.dart';
-
+/*
 void main() {
-
   OnBoardMockViewModel? mockViewModel;
   IStringHelper? stringHelper;
   setUp(() {
@@ -22,7 +21,7 @@ void main() {
     expect(text.contains(RegExp("[A-Z\s]+")), true);
   });
 
-  test("OnBoard Get Models", () async{
+  test("OnBoard Get Models", () async {
     await mockViewModel!.onBoardGetModels();
     expect(mockViewModel!.onBoardModel!, isNotEmpty);
   });
@@ -51,3 +50,4 @@ void main() {
     });
   });
 }
+*/

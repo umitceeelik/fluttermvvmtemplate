@@ -9,19 +9,35 @@ part of 'login_view_model.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$LoginViewModel on _LoginViewModelBase, Store {
-  late final _$emailAtom =
-      Atom(name: '_LoginViewModelBase.email', context: context);
+  late final _$isLoadingAtom =
+      Atom(name: '_LoginViewModelBase.isLoading', context: context);
 
   @override
-  String? get email {
-    _$emailAtom.reportRead();
-    return super.email;
+  bool get isLoading {
+    _$isLoadingAtom.reportRead();
+    return super.isLoading;
   }
 
   @override
-  set email(String? value) {
-    _$emailAtom.reportWrite(value, super.email, () {
-      super.email = value;
+  set isLoading(bool value) {
+    _$isLoadingAtom.reportWrite(value, super.isLoading, () {
+      super.isLoading = value;
+    });
+  }
+
+  late final _$isLockOpenAtom =
+      Atom(name: '_LoginViewModelBase.isLockOpen', context: context);
+
+  @override
+  bool get isLockOpen {
+    _$isLockOpenAtom.reportRead();
+    return super.isLockOpen;
+  }
+
+  @override
+  set isLockOpen(bool value) {
+    _$isLockOpenAtom.reportWrite(value, super.isLockOpen, () {
+      super.isLockOpen = value;
     });
   }
 
@@ -29,11 +45,11 @@ mixin _$LoginViewModel on _LoginViewModelBase, Store {
       ActionController(name: '_LoginViewModelBase', context: context);
 
   @override
-  void changeEmail(String value) {
+  void isLockStateChange() {
     final _$actionInfo = _$_LoginViewModelBaseActionController.startAction(
-        name: '_LoginViewModelBase.changeEmail');
+        name: '_LoginViewModelBase.isLockStateChange');
     try {
-      return super.changeEmail(value);
+      return super.isLockStateChange();
     } finally {
       _$_LoginViewModelBaseActionController.endAction(_$actionInfo);
     }
@@ -42,7 +58,8 @@ mixin _$LoginViewModel on _LoginViewModelBase, Store {
   @override
   String toString() {
     return '''
-email: ${email}
+isLoading: ${isLoading},
+isLockOpen: ${isLockOpen}
     ''';
   }
 }

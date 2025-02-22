@@ -11,5 +11,9 @@ class ImageConstants {
 
   String get logo => toPng("logo");
 
+  String get hotDog => toJpg("hotdog");
+
   String toPng(String path) =>"asset/image/$path.png";
+
+  String toJpg(String path) =>"asset/image/$path.jpg";
 }

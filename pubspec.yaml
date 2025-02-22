@@ -46,6 +46,7 @@ dependencies:
   json_annotation: ^4.9.0
   flutter_svg: ^2.0.17
   auto_size_text: ^3.0.0
+  vexana: ^5.0.3
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +74,7 @@ flutter:
   assets:
     - asset/lang/
     - asset/svg/
+    - asset/image/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

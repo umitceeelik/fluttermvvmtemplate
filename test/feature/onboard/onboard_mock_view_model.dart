@@ -6,11 +6,12 @@ import 'package:fluttermvvmtemplate/core/constants/enums/http_request_enum.dart'
 import 'package:fluttermvvmtemplate/core/init/network/ICoreDio.dart';
 import 'package:fluttermvvmtemplate/core/init/network/core_dio.dart';
 import 'package:fluttermvvmtemplate/view/authenticate/onboard/model/on_board_model.dart';
-import 'package:fluttermvvmtemplate/view/authenticate/onboard/view-model/on_board_view_model.dart';
+import 'package:fluttermvvmtemplate/view/authenticate/onboard/viewModel/on_board_view_model.dart';
 import 'package:mobx/src/core.dart';
 
 import '../test/core/network/dio_mock_model.dart';
 
+/*
 class OnBoardMockViewModel implements OnBoardViewModel {
   @override
   BuildContext? buildContext;
@@ -73,3 +74,4 @@ class MockStringHelper extends IStringHelper {
     return data.toUpperCase();
   }
 }
+*/

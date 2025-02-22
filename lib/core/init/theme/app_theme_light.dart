@@ -17,6 +17,12 @@ class AppThemeLight extends AppTheme with ILightTheme {
         fontFamily: ApplicationConstants.FONT_FAMILY,
         colorScheme: _appColorScheme(),
         textTheme: _appTextTheme(),
+        inputDecorationTheme: InputDecorationTheme(
+          enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+          border: UnderlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+          focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.green))
+        ),
+        scaffoldBackgroundColor: Color(0xfff1f3f8),
         floatingActionButtonTheme: ThemeData.light().floatingActionButtonTheme.copyWith(),
         tabBarTheme: _appTabBarTheme(),
       );
@@ -52,7 +58,7 @@ class AppThemeLight extends AppTheme with ILightTheme {
     return ColorScheme(
       primary: colorSchemeLight!.blue,
       secondary: colorSchemeLight!.white,
-      surface: colorSchemeLight!.white,
+      surface: colorSchemeLight!.yellow,
       error: colorSchemeLight!.green,
       onPrimary: colorSchemeLight!.orange,
       onSecondary: colorSchemeLight!.black,
